@@ -1,7 +1,7 @@
 % 定义 GIF 文件名和保存图片的文件名
-gif_filename = 'puma_trajectory2_0.gif'; % 请替换为你的 GIF 文件名
-first_frame_filename = 'puma_trajectory2_0_first_frame.png'; % 第一帧保存为的文件名
-last_frame_filename = 'puma_trajectory2_0_last_frame.png'; % 最后一帧保存为的文件名
+gif_filename = 'puma_trajectory1_3.gif'; % 请替换为你的 GIF 文件名
+first_frame_filename = 'puma_trajectory1_3_first_frame.png'; % 第一帧保存为的文件名
+last_frame_filename = 'puma_trajectory1_3_last_frame.png'; % 最后一帧保存为的文件名
 
 % 读取 GIF 文件
 info = imfinfo(gif_filename); % 获取 GIF 文件的信息
