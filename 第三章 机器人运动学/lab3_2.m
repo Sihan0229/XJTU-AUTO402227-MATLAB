@@ -3,12 +3,16 @@ mdl_puma560;
 
 %%
 % 计算过程
+% 计算两个目标位姿
+% 结合了目标位置和平移变换，表示末端执行器的整体位姿（位置 + 方向）
 T1 = transl(0, -0.25, 0) * trotx(pi/2);
 T2 = transl(0.5, 0.25, 0.5) * trotx(pi/2);
+% 逆运动学求解
 q1 = p560.ikine(T1);
 q2 = p560.ikine(T2);
-t = [0:0.05:2]';
-q = jtraj(q1, q2, t);
+% 使用关节轨迹生成工具
+t = [0:0.05:2]'; % 时间向量
+q = jtraj(q1, q2, t); % 生成从 q1 到 q2 的关节轨迹
 p560.plot(q);
 figure;
 
@@ -40,6 +44,8 @@ xlabel('X');
 ylabel('Y');
 zlabel('Z');
 title('End Effector Trajectory');
+
+
 
 %%
 % 笛卡尔坐标轨迹规划
