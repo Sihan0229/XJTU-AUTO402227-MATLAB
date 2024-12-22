@@ -1,8 +1,8 @@
 mdl_puma560;
 
 %% 定义GIF保存文件路径
-gif_filename1 = 'puma_trajectory1_5.gif';  % 第一个GIF文件名
-gif_filename2 = 'puma_trajectory2_5.gif';  % 第二个GIF文件名
+gif_filename1 = 'puma_trajectory1_7.gif';  % 第一个GIF文件名
+gif_filename2 = 'puma_trajectory2_7.gif';  % 第二个GIF文件名
 
 %% 绘制第一个动画并保存为GIF
 T1 = transl(0.5, -0.5, -0.5) * trotx(pi/2);
